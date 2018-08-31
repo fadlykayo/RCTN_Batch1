@@ -93,7 +93,6 @@ In code with multiple nested functions,
 it can be difficult to keep track of and remember to bind the correct this context.
 In ES5, you can use workarounds like the .bind method (which is slow)
 or creating a closure using var self = this
-
 Benefits:
 1. Arrow functions allow you to retain the scope of the caller inside the function,
 you don’t need to create self = this closures or use bind (lexical binding of this)
@@ -251,7 +250,6 @@ data = [
 
 /*
 // ==================================================
-
 function getAges(data) {
   let sum = 0;
   for (var i = 0; i < data.length; i++){
@@ -262,11 +260,8 @@ function getAges(data) {
   }
   return sum;
 };
-
 console.log(getAges(data)); // ages = 30
-
 // ==================================================
-
 let ages = data
   .filter((animal) => {
     return animal.type === 'dog';
@@ -275,30 +270,22 @@ let ages = data
 }).reduce((sum, age) => {
     return sum + age;
 }, 0);
-
 console.log(ages); // ages = 30
-
 // ==================================================
-
 let isDog = (animal) => {
   return animal.type === 'dog';
 };
-
 let dogYears = (animal) => {
   return animal.age * 3;
 };
-
 let sum = (sum, age) => {
   return sum + age;
 };
-
 let ages = data
   .filter(isDog)
   .map(dogYears)
   .reduce(sum, 0);
-
 console.log(ages); // ages = 30
-
 // ==================================================
 */
 

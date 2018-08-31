@@ -7,6 +7,18 @@ Homework 1:
 3. print the result
 */
 
+/*
+Homework 2:
+1. every each name tambahkan + ' Green';
+2. print the result
+*/
+
+/*
+Homework 3:
+1. sebuah string yg isinya nama dengan dipisahkan koma. Contoh: 'Fadly Kayo, Alan, Budi, dst';
+2. print the result
+*/
+
 const videoData = [
     {
         name: 'Miss Scarlet',
@@ -83,11 +95,10 @@ const videoData = [
 ];
 // ==================================================
 
-// let result = videoData.filter((data) => {
-//   return data.present === true;
-// });
+// let result = videoData.reduce((sum, data) => {
+//   return sum += data.name + ', ';
+// }, '');
 //
-// console.log(result.length);
 // console.log(result);
 
 // ==================================================
