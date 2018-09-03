@@ -24,22 +24,22 @@
 
 class Person {
   constructor(name) {
-    this._name = name;
+    this.name = name;
   };
 
   getName() {
-    return this._name;
+    return this.name;
   };
 };
 
 class Employee extends Person {
   constructor(name, title) { // urutan harus diperhatikan
     super(name);
-    this._title = title;
+    this.title = title;
   };
 
   doWork() {
-    return this._name + " is working";
+    return this.name + " is working";
   };
 };
 
@@ -148,11 +148,5 @@ let rabbit = new Rabbit("White Rabbit");
 
 // super.method(...) to call a parent method.
 // super(...) to call a parent constructor (inside our constructor only).
-
-// ==================================================
-
-
-
-
 
 // ==================================================
