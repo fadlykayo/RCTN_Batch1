@@ -81,7 +81,7 @@
 //
 // /*
 // Kelebihan:
-// 1. It actually binds the context of the Promise’s this to the context of the function that contains it,
+// 1. It actually binds the context of the Promise’s 'this' to the context of the function that contains it
 //
 // 2. This avoids having to use bind or the dreaded var self = this trick to keep a reference to the desired scope.
 // */
@@ -243,53 +243,53 @@ data = [
 ];
 
 /*
+Exersice 1
 1. Select only the dogs
 2. Select their ages then multiply their ages by 3
 3. Sum the results
 */
 
-/*
-// ==================================================
-function getAges(data) {
-  let sum = 0;
-  for (var i = 0; i < data.length; i++){
-    if (data[i].type === 'dog'){
-      let tempAge = data[i].age;
-      sum += (tempAge * 3);
-    }
-  }
-  return sum;
-};
-console.log(getAges(data)); // ages = 30
-// ==================================================
-let ages = data
-  .filter((animal) => {
-    return animal.type === 'dog';
-}).map((animal) => {
-    return animal.age * 3
-}).reduce((sum, age) => {
-    return sum + age;
-}, 0);
-console.log(ages); // ages = 30
-// ==================================================
-let isDog = (animal) => {
-  return animal.type === 'dog';
-};
-let dogYears = (animal) => {
-  return animal.age * 3;
-};
-let sum = (sum, age) => {
-  return sum + age;
-};
-let ages = data
-  .filter(isDog)
-  .map(dogYears)
-  .reduce(sum, 0);
-console.log(ages); // ages = 30
-// ==================================================
-*/
+// // ==================================================
+// function getAges(data) {
+//   let sum = 0;
+//   for (var i = 0; i < data.length; i++){
+//     if (data[i].type === 'dog'){
+//       let tempAge = data[i].age;
+//       sum += (tempAge * 3);
+//     }
+//   }
+//   return sum;
+// };
+// console.log(getAges(data)); // ages = 30
+// // ==================================================
+// let ages = data
+//   .filter((animal) => {
+//     return animal.type === 'dog';
+// }).map((animal) => {
+//     return animal.age * 3
+// }).reduce((sum, age) => {
+//     return sum + age;
+// }, 0);
+// console.log(ages); // ages = 30
+// // ==================================================
+// let isDog = (animal) => {
+//   return animal.type === 'dog';
+// };
+// let dogYears = (animal) => {
+//   return animal.age * 3;
+// };
+// let sum = (sum, age) => {
+//   return sum + age;
+// };
+// let ages = data
+//   .filter(isDog)
+//   .map(dogYears)
+//   .reduce(sum, 0);
+// console.log(ages); // ages = 30
+// // ==================================================
 
 /*
+Exersice 2
 1. Select only the dogs
 2. Select their name only
 3. Concat their names
@@ -305,6 +305,10 @@ console.log(ages); // ages = 30
 // }, '');
 //
 // console.log(result);
+
+// ==================================================
+
+// Exersice 3
 
 // let spotifySongs = [
 //   {id: 0, name: 'Curl_of_the_Blue', duration: 204},
@@ -329,7 +333,7 @@ console.log(ages); // ages = 30
 //   let songName = song.name;
 //
 //   return {
-//     ...otherKey,
+//     ...otherKey, // see other option
 //     [songName]: id,
 //     duration: Math.round(song.duration / 60),
 //   };
@@ -340,6 +344,7 @@ console.log(ages); // ages = 30
 //
 // console.log(result);
 
+// Other option:
 // var o1 = { a: 1 };
 // var o2 = { b: 2 };
 // var o3 = { c: 3 };
