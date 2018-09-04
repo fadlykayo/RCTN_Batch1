@@ -353,6 +353,6 @@ const askMom = async() => {
 
 askMom();
 
-// Resources for next week:
+// Resources for next session:
 // https://medium.com/skyshidigital/1-pendahuluan-seminggu-menjadi-master-react-js-seri-tingkat-dasar-7b6ec7b04af
 // https://medium.freecodecamp.org/learn-react-js-in-5-minutes-526472d292f4
