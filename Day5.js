@@ -1,56 +1,87 @@
 // ========= PropTypes =========
 
-// npm install prop-types --save
+// source: https://reactjs.org/docs/typechecking-with-proptypes.html
+// install: npm install prop-types --save
 
-// the old way:
+// The old way:
 
-// import React from 'react';
-//
-// function Detail ({caption, style}) {
-//   return <p style={style}>{caption}</p>
-// }
-//
-// Detail.propTypes = {
-//   caption: React.PropTypes.string.isRequired,
-//   style: React.PropTypes.objectOf(
-//     React.PropTypes.string
-//   ),
-// }
-//
-// export default Detail;
+import React, { Component } from 'react';
 
-// the new way:
+Detail.propTypes = {
+  caption: React.PropTypes.string.isRequired,
+  style: React.PropTypes.objectOf(
+    React.PropTypes.string
+  ),
+};
 
-// import React from 'react';
-// import PropTypes from 'prop-types';
-//
-// function Detail ({caption, style}) {
-//   return <p style={style}>{caption}</p>
-// }
-//
-// Detail.propTypes = {
-//   caption: PropTypes.string.isRequired,
-//   style: PropTypes.objectOf(
-//     PropTypes.string
-//   ),
-// }
-//
-// export default Detail;
+class Detail extends Component {
+  constructor(props) {
+    super(props);
+  };
 
-// or so:
+  render() {
+    return (
+      <div>
+        <p style={ this.props.style }>{ this.props.caption }</p>
+      </div>
+    );
+  }
+}
 
-// import React from 'react';
-// import {string, objectOf} from 'prop-types';
-//
-// function Detail ({caption, style}) {
-//   return <p style={style}>{caption}</p>
-// }
-//
-// Detail.propTypes = {
-//   caption: string.isRequired,
-//   style: objectOf(
-//     string
-//   ),
-// }
-//
-// export default Detail;
+export default Detail;
+
+// The new way:
+
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
+Detail.propTypes = {
+  caption: PropTypes.string.isRequired,
+  style: PropTypes.objectOf(
+    PropTypes.string
+  ),
+};
+
+class Detail extends Component {
+  constructor(props) {
+    super(props);
+  };
+
+  render() {
+    return (
+      <div>
+        <p style={ this.props.style }>{ this.props.caption }</p>
+      </div>
+    );
+  }
+}
+
+export default Detail;
+
+// or like this:
+
+import React, { Component } from 'react';
+import { string, objectOf } from 'prop-types';
+
+Detail.propTypes = {
+  caption: string.isRequired,
+  style: objectOf(
+    string
+  ),
+};
+
+class Detail extends Component {
+  constructor(props) {
+    super(props);
+  };
+
+  render() {
+    return (
+      <div>
+        <p style={ this.props.style }>{ this.props.caption }</p>
+      </div>
+    );
+  }
+}
+
+export default Detail;
