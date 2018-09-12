@@ -2,13 +2,21 @@ import React, { Component } from 'react';
 import './App.css';
 
 export default class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      tanggal: new Date().toString(),
+    };
+  };
+
   renderHeader() {
     return (
       <div className="header">
         <div className="header_left">
-          <a className="header_title" href="#">Qtemu</a>
-          <a className="header_title" href="#">Create Meetup</a>
-          <a className="header_title" href="#">Explore</a>
+          <a className="header_title" onClick={ () => this.setState({tanggal: '123123123'}) }>Qtemu</a>
+          <a className="header_title" >Create Meetup</a>
+          <a className="header_title" >Explore</a>
         </div>
         <a className="header_title">Login</a>
       </div>
@@ -27,7 +35,7 @@ export default class App extends Component {
   renderProfile() {
     return (
       <div className="row">
-        <img src="https://via.placeholder.com/200x200"/>
+        <img alt="placeholder" src="https://via.placeholder.com/200x200"/>
         <div className="row_right">
           <h3 className="row_right_title">Hacktiv8 Meetup</h3>
           <div className="row_right_info">
@@ -54,13 +62,11 @@ export default class App extends Component {
         <h3>Next Meetup</h3>
         <div className="column">
           <h4 style={{marginTop: 0, marginBottom: 10,}}>Awesome meetup and event</h4>
-          <div>25 January 2019</div>
-          <p>
+          <div>{this.state.tanggal}</div>
             <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
             <div>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</div>
             <div>It has survived not only five centuries, but also the leap into electronic typesetting.</div>
             <div>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</div>
-          </p>
           <div>Lorem Ipsum is simply dummy text of the printing.</div>
           <p>See you there!</p>
           <p>Best, Twinky, Winky, Dipsy, Lala, Poh. JakartaJS Organizer.</p>
