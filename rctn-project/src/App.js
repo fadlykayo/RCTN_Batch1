@@ -9,6 +9,34 @@ export default class App extends Component {
 
     this.state = {
       tanggal: new Date().toString(),
+      info: {
+        location: 'Jakarta, Indonesia',
+        numberOfMembers: '1078',
+        headOrganizer: 'Hacktiv8',
+        memberOrganizer: 'Twinky, Winky, Dipsy, Lala, Poh',
+      },
+      twitter: '@JakartaJS',
+      hashTag: '#jakartajs',
+      meetups: [
+        {
+          id: 39,
+          date: '27 November 2017',
+          topic: 'JakartaJS with kumparan',
+          participants: '139'
+        },
+        {
+          id: 40,
+          date: '27 September 2017',
+          topic: 'JakartaJS with bibli',
+          participants: '239'
+        },
+        {
+          id: 41,
+          date: '27 October 2017',
+          topic: 'JakartaJS with Hacktiv8',
+          participants: '39'
+        }
+      ]
     };
   };
 
@@ -51,7 +79,7 @@ export default class App extends Component {
         <h3>Next Meetup</h3>
         <div className="column">
           <h4 style={{marginTop: 0, marginBottom: 10,}}>Awesome meetup and event</h4>
-          <div>{this.state.tanggal}</div>
+          <div>29 Januari 2019</div>
             <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
             <div>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</div>
             <div>It has survived not only five centuries, but also the leap into electronic typesetting.</div>
