@@ -13,7 +13,7 @@ export default class Header extends Component {
           <Link title='Create Meetup'/>
           <Link title='Explore'/>
         </Navbar>
-        <a className="header_title">Login</a>
+        <Link title='Login'/>
       </div>
     )
   }

@@ -62,7 +62,7 @@ export default class App extends Component {
               <div>Organizer</div>
             </div>
             <div className="row_right_info_content">
-              <div>Jakarta, Indonesia</div>
+              <div>{this.state.info.location}</div>
               <div>1078</div>
               <div>Hacktiv8</div>
             </div>
@@ -95,7 +95,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="root">
-        <Header date={this.state.tanggal}/>
+        <Header/>
         { this.renderBody() }
       </div>
     );
