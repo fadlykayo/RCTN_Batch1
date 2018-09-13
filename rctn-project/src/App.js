@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import Header from './components/Header';
 import './App.css';
 
 export default class App extends Component {
@@ -8,19 +10,6 @@ export default class App extends Component {
     this.state = {
       tanggal: new Date().toString(),
     };
-  };
-
-  renderHeader() {
-    return (
-      <div className="header">
-        <div className="header_left">
-          <a className="header_title" onClick={ () => this.setState({tanggal: '123123123'}) }>Qtemu</a>
-          <a className="header_title" >Create Meetup</a>
-          <a className="header_title" >Explore</a>
-        </div>
-        <a className="header_title">Login</a>
-      </div>
-    );
   };
 
   renderBody() {
@@ -78,7 +67,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="root">
-        { this.renderHeader() }
+        <Header date={this.state.tanggal}/>
         { this.renderBody() }
       </div>
     );

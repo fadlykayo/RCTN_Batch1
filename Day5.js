@@ -85,3 +85,7 @@ class Detail extends Component {
 }
 
 export default Detail;
+
+// Sources:
+
+// https://reactjs.org/docs/typechecking-with-proptypes.html

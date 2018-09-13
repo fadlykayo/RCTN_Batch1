@@ -43,8 +43,6 @@ export class ListPeople extends Component {
   };
 
   renderChild() {
-    console.log('nama', this.state.nama);
-    console.log('status', this.state.status);
     return this.props.people.map((data, index) => {
       return (
         <ul key={index}>
@@ -70,3 +68,7 @@ export class ListPeople extends Component {
     return this.renderChild();
   }
 }
+
+ListPeople.propTypes = {
+  people: PropTypes.array
+};
