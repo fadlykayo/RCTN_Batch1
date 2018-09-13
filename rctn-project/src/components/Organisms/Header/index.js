@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Navbar from '../../molecules/NavBar';
+import Navbar from '../../Molecules/NavBar';
+import Link from '../../Atoms/Link';
 import './style.css';
 
 export default class Header extends Component {
