@@ -1,3 +1,11 @@
+/*
+Resourceful links for this session:
+https://medium.com/@joomiguelcunha/learn-map-filter-and-reduce-in-javascript-ea59009593c4
+https://javascriptplayground.com/real-life-es6-arrow-fn/
+https://codeburst.io/javascript-learn-understand-arrow-functions-fe2083533946
+https://www.sitepoint.com/es6-arrow-functions-new-fat-concise-syntax-javascript/
+*/
+
 // ===== this keyword =====
 
 // function API() {

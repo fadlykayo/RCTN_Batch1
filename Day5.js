@@ -1,3 +1,10 @@
+/*
+Resourceful links for this session:
+https://reactjs.org/docs/typechecking-with-proptypes.html
+https://blog.tylerbuchea.com/react-proptypes/
+https://github.com/danilowoz/react-atomic-design
+*/
+
 // ========= PropTypes =========
 
 // source: https://reactjs.org/docs/typechecking-with-proptypes.html

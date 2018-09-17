@@ -1,3 +1,11 @@
+/*
+Resourceful links for this session:
+https://medium.com/skyshidigital/1-pendahuluan-seminggu-menjadi-master-react-js-seri-tingkat-dasar-7b6ec7b04af
+https://medium.freecodecamp.org/learn-react-js-in-5-minutes-526472d292f4
+https://www.reactenlightenment.com/react-jsx/5.1.html
+https://www.w3schools.com/js/js_htmldom.asp
+*/
+
 // ========= React Flow =========
 
 let reactFlow = {
