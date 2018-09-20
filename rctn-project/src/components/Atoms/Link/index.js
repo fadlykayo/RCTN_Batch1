@@ -11,7 +11,7 @@ const linkStyle = {
 };
 
 const myStyle = css`
-  fontSize: 20px;
+  font-size: 20px;
   color: pink;
 `
 
