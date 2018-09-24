@@ -1,7 +1,9 @@
 const style = {
-  link: {
+  header_title: {
+    marginTop: 0,
+    color: 'white',
     fontSize: 20,
-    color: 'pink',
+    textDecoration: 'none',
   },
 };
 

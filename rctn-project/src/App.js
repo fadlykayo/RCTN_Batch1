@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import Header from './components/Organisms/Header';
 import './App.css';
 
@@ -79,7 +79,7 @@ export default class App extends Component {
         <h3>Next Meetup</h3>
         <div className="column">
           <h4 style={{marginTop: 0, marginBottom: 10,}}>Awesome meetup and event</h4>
-          <div>29 Januari 2019</div>
+          <div>29 January 2019</div>
             <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
             <div>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</div>
             <div>It has survived not only five centuries, but also the leap into electronic typesetting.</div>
