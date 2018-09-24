@@ -14,27 +14,63 @@ import {
 import './style.css';
 
 export default class Profile extends Component {
+  renderImage() {
+    if (this.props.circleThumbnail) {
+      return (<img alt="thumbnail_circle" src="https://via.placeholder.com/80x80" style={{height: 80, width: 80, borderRadius: 50}}/>);
+    } else {
+      return (<img alt="placeholder" src="https://via.placeholder.com/200x200"/>);
+    }
+  };
+
+  renderLeftList() {
+    if (this.props.leftList) {
+      return this.props.leftList.map((title, index) => {
+        return (<div key={index}>{title}</div>);
+      });
+    };
+
+    return null;
+  };
+
+  renderRightList() {
+    if (this.props.rightList) {
+      return this.props.rightList.map((title, index) => {
+        return (<div key={index}>{title}</div>);
+      });
+    };
+
+    return null;
+  };
+
+  renderButton() {
+    if (this.props.button) {
+      return (<Button title={'Join Us'}></Button>);
+    };
+
+    return null;
+  };
+
   render() {
     return (
       <div className="row">
 
-        <img alt="placeholder" src="https://via.placeholder.com/200x200"/>
+        { this.renderImage() }
 
-        <Section className="section_right">
-          <SectionTitle className="section_title_right" title={'Next Meetup'}/>
+        <Section className={this.props.classNameSection}>
+
+          <SectionTitle className="section_title_right" title={this.props.title}/>
+
           <SectionContent className="section_content_right">
-            <div className="row_right_info_content">
-              <div>Location</div>
-              <div>Members</div>
-              <div>Organizer</div>
+            <div className={this.props.classNameInfo}>
+              { this.renderLeftList() }
             </div>
-            <div className="row_right_info_content">
-              <div>{this.props.location}</div>
-              <div>{this.props.numberOfMembers}</div>
-              <div>{this.props.headOrganizer}</div>
+            <div className={this.props.classNameInfo}>
+              { this.renderRightList() }
             </div>
           </SectionContent>
-          <Button title={'Join Us'}></Button>
+
+          { this.renderButton() }
+
         </Section>
 
       </div>

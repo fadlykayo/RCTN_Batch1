@@ -10,6 +10,7 @@ import {
   Header,
   Profile,
   Section,
+  PastMeetup,
 } from './components/Organisms';
 import {
   SectionContent,
@@ -66,14 +67,19 @@ export default class App extends Component {
         <div className="body">
 
           <Profile
-            location={this.state.info.location}
-            numberOfMembers={this.state.info.numberOfMembers}
-            headOrganizer={this.state.info.headOrganizer}
+            classNameSection={'section_right'}
+            classNameInfo={'row_right_info_content'}
+            leftList={['Location', 'Members', 'Organizer']}
+            rightList={[this.state.info.location, this.state.info.numberOfMembers, this.state.info.headOrganizer]}
+            title={'Hacktiv8 Meetup'}
+            button
           />
 
           <Section>
+
             <SectionTitle title={'Next Meetup'}/>
-            <SectionContent className="section_content_column">
+
+            <SectionContent className="section_content_column_grey">
               <h4 style={{marginTop: 0, marginBottom: 10,}}>Awesome meetup and event</h4>
               <div>{this.state.info.date}</div>
                 <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
@@ -84,7 +90,38 @@ export default class App extends Component {
               <p>See you there!</p>
               <p>{this.state.info.memberOrganizer}</p>
             </SectionContent>
+
           </Section>
+
+          <Section>
+
+            <SectionTitle title={'About Meetup'}/>
+
+            <SectionContent className="section_content_column_white">
+              <div style={{marginBottom: 15,}}>Come and meet other developers interested in Javascript and it's library in Greater Jakarta area.</div>
+              <div>Twitter {this.state.twitter} and we use hashtag #jakartajs</div>
+            </SectionContent>
+
+          </Section>
+
+          <Section>
+
+            <SectionTitle title={'Members'}/>
+
+            <Profile
+              classNameSection={'section_right_alt'}
+              classNameInfo={'row_right_info_content_alt'}
+              leftList={['Fadly Kayo']}
+              rightList={['4 others']}
+              title={'Organizers'}
+              circleThumbnail
+            />
+
+          </Section>
+
+          <PastMeetup
+            meetups = {this.state.meetups}
+          />
 
         </div>
 

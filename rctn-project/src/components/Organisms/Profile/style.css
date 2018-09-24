@@ -17,3 +17,11 @@
   flex-direction: column;
   height: 85px;
 }
+
+.row_right_info_content_alt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+}
