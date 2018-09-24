@@ -9,63 +9,9 @@
 }
 
 /*------------------------------------*\
-  Button
-\*------------------------------------*/
-
-.button {
-  width: 150px;
-  padding: 20px;
-  border: 0;
-  background: #828282;
-  color: white;
-}
-
-/*------------------------------------*\
   Body
 \*------------------------------------*/
 
 .body {
   margin: 10px;
-}
-
-/*------------------------------------*\
-  Sections
-\*------------------------------------*/
-
-.row {
-  display: flex;
-  flex-direction: row;
-  padding: 15px;
-  background: #C4C4C4;
-}
-
-.column {
-  display: flex;
-  flex-direction: column;
-  padding: 15px;
-  background: #C4C4C4;
-}
-
-.row_right_title {
-  margin: 0;
-}
-
-.row_right {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  margin-left: 50px;
-}
-
-.row_right_info {
-  display: flex;
-  justify-content: space-between;
-  width: 250px;
-}
-
-.row_right_info_content {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  height: 85px;
 }

@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
+
 import {
   NavBar,
 } from '../../Molecules';
 import {
-  Link,
+  CustomLink,
 } from '../../Atoms';
 import './style.css';
 
@@ -13,12 +14,12 @@ export default class Header extends Component {
     return (
       <div className="header">
         <NavBar>
-          <Link title='Qtemu'/>
-          <Link title='Create Meetup'/>
-          <Link title='Explore'/>
+          <CustomLink title='Qtemu'/>
+          <CustomLink title='Create Meetup'/>
+          <CustomLink title='Explore'/>
         </NavBar>
-        <Link title='Login'/>
+        <CustomLink title='Login'/>
       </div>
-    )
+    );
   }
 }

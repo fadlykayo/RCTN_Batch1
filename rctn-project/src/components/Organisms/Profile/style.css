@@ -1,0 +1,19 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+  background: #C4C4C4;
+}
+
+.row_right_info {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+}
+
+.row_right_info_content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 85px;
+}

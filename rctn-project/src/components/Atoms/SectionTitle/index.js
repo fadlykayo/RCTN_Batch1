@@ -3,12 +3,10 @@ import React, { Component } from 'react';
 
 import './style.css';
 
-export default class NavBar extends Component {
+export default class SectionTitle extends Component {
   render() {
     return (
-      <div className="header_left">
-        {this.props.children}
-      </div>
+      <h3 className={this.props.className}>{this.props.title}</h3>
     );
   }
 }

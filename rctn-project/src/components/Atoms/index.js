@@ -1,5 +1,9 @@
-import Link from './Link';
+import Button from './Button';
+import CustomLink from './CustomLink';
+import SectionTitle from './SectionTitle';
 
 export {
-	Link,
+	Button,
+	CustomLink,
+	SectionTitle,
 };

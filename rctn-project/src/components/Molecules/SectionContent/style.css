@@ -1,0 +1,12 @@
+.section_content_right {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+}
+
+.section_content_column {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background: #C4C4C4;
+}
