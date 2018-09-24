@@ -27,9 +27,10 @@ export default class App extends Component {
       tanggal: new Date().toString(),
       info: {
         location: 'Jakarta, Indonesia',
+        date: '29 January 2019',
         numberOfMembers: '1078',
         headOrganizer: 'Hacktiv8',
-        memberOrganizer: 'Twinky, Winky, Dipsy, Lala, Poh',
+        memberOrganizer: 'Best, Twinky, Winky, Dipsy, Lala, Poh. JakartaJS Organizer.',
       },
       twitter: '@JakartaJS',
       hashTag: '#jakartajs',
@@ -66,20 +67,22 @@ export default class App extends Component {
 
           <Profile
             location={this.state.info.location}
+            numberOfMembers={this.state.info.numberOfMembers}
+            headOrganizer={this.state.info.headOrganizer}
           />
 
           <Section>
             <SectionTitle title={'Next Meetup'}/>
             <SectionContent className="section_content_column">
               <h4 style={{marginTop: 0, marginBottom: 10,}}>Awesome meetup and event</h4>
-              <div>29 January 2019</div>
+              <div>{this.state.info.date}</div>
                 <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
                 <div>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</div>
                 <div>It has survived not only five centuries, but also the leap into electronic typesetting.</div>
                 <div>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</div>
               <div>Lorem Ipsum is simply dummy text of the printing.</div>
               <p>See you there!</p>
-              <p>Best, Twinky, Winky, Dipsy, Lala, Poh. JakartaJS Organizer.</p>
+              <p>{this.state.info.memberOrganizer}</p>
             </SectionContent>
           </Section>
 

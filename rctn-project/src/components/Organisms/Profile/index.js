@@ -30,13 +30,13 @@ export default class Profile extends Component {
             </div>
             <div className="row_right_info_content">
               <div>{this.props.location}</div>
-              <div>1078</div>
-              <div>Hacktiv8</div>
+              <div>{this.props.numberOfMembers}</div>
+              <div>{this.props.headOrganizer}</div>
             </div>
           </SectionContent>
           <Button title={'Join Us'}></Button>
         </Section>
-        
+
       </div>
     );
   }
