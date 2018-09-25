@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import {
+  Link,
+  Route,
+} from "react-router-dom";
 import { css } from 'emotion';
+
+// import PropTypes from 'prop-types';
 
 import './style.css';
 import style from './style.js';
@@ -8,10 +13,24 @@ import style from './style.js';
 export default class CustomLink extends Component {
   render() {
     return (
-      // <a className="header_title" >{this.props.title}</a>
-      <a className={css(style.header_title)} onClick={null}>{this.props.title}</a>
+      <Route
+        path={this.props.to}
+      >
+        <Link className={css(style.header_title)} to={this.props.to}>{this.props.title}</Link>
+      </Route>
     );
   }
 }
-
-// todo: variant, classes in example
+//
+// const OldSchoolMenuLink = ({ label, to, activeOnlyWhenExact }) => (
+//   <Route
+//     path={to}
+//     exact={activeOnlyWhenExact}
+//     children={({ match }) => (
+//       <div className={match ? "active" : ""}>
+//         {match ? "> " : ""}
+//         <Link to={to}>{label}</Link>
+//       </div>
+//     )}
+//   />
+// );

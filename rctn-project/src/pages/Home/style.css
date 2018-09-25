@@ -1,9 +1,8 @@
 /*------------------------------------*\
-  Root
+  Body
 \*------------------------------------*/
 
-.root {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+.body {
+  margin: 10px;
+  padding-bottom: 50px;
 }
