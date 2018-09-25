@@ -14,10 +14,14 @@ export default class CustomLink extends Component {
   render() {
     return (
       <Route
-        path={this.props.to}
-      >
-        <Link className={css(style.header_title)} to={this.props.to}>{this.props.title}</Link>
-      </Route>
+        path={this.props.toLink}
+        exact={this.props.exact}
+        children={({ match }) => (
+          <div >
+            <Link className={match ? css(style.header_title) : ""} to={this.props.toLink}>{this.props.title}</Link>
+          </div>
+        )}
+      />
     );
   }
 }

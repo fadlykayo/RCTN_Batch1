@@ -22,33 +22,46 @@ import {
 import './App.css';
 
 export default class App extends Component {
+  // <Header>
+  //   <NavBar>
+  //     <CustomLink to="/" title='Qtemu'/>
+  //     <CustomLink to="/about" title='Create Meetup'/>
+  //     <CustomLink to="/about" title='Explore'/>
+  //   </NavBar>
+  //   <CustomLink title='Login'/>
+  // </Header>
+
+  // <ul>
+  //   <li>
+  //     <Link to="/">Home</Link>
+  //   </li>
+  //   <li>
+  //     <Link to="/about">About</Link>
+  //   </li>
+  // </ul>
   render() {
     return (
       <Router>
         <div className="root">
+
           <ul>
             <li>
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/create">Create Meetup</Link>
+            </li>
+            <li>
+              <Link to="/explore">Explore</Link>
             </li>
           </ul>
 
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={Home} />
+          <Route exact path="/" component={Home}/>
+          <Route path="/create" component={Home}/>
+          <Route path="/explore" component={Home}/>
 
         </div>
       </Router>
     );
   }
 };
-
-// <Header>
-//   <NavBar>
-//     <CustomLink to="/" title='Qtemu'/>
-//     <CustomLink to="/about" title='Create Meetup'/>
-//     <CustomLink to="/about" title='Explore'/>
-//   </NavBar>
-//   <CustomLink title='Login'/>
-// </Header>
