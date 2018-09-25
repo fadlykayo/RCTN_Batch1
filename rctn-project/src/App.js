@@ -8,6 +8,9 @@ import {
 
 import {
   Home,
+  Login,
+  CreateMeetup,
+  Explore,
 } from './pages';
 import {
   Header,
@@ -22,15 +25,6 @@ import {
 import './App.css';
 
 export default class App extends Component {
-  // <Header>
-  //   <NavBar>
-  //     <CustomLink to="/" title='Qtemu'/>
-  //     <CustomLink to="/about" title='Create Meetup'/>
-  //     <CustomLink to="/about" title='Explore'/>
-  //   </NavBar>
-  //   <CustomLink title='Login'/>
-  // </Header>
-
   // <ul>
   //   <li>
   //     <Link to="/">Home</Link>
@@ -44,21 +38,19 @@ export default class App extends Component {
       <Router>
         <div className="root">
 
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/create">Create Meetup</Link>
-            </li>
-            <li>
-              <Link to="/explore">Explore</Link>
-            </li>
-          </ul>
+          <Header>
+            <NavBar>
+              <CustomLink exact to="/" title='Qtemu'/>
+              <CustomLink to="/create" title='Create Meetup'/>
+              <CustomLink to="/explore" title='Explore'/>
+            </NavBar>
+            <CustomLink to="/login" title='Login'/>
+          </Header>
 
           <Route exact path="/" component={Home}/>
-          <Route path="/create" component={Home}/>
-          <Route path="/explore" component={Home}/>
+          <Route path="/create" component={CreateMeetup}/>
+          <Route path="/explore" component={Explore}/>
+          <Route path="/login" component={Login}/>
 
         </div>
       </Router>

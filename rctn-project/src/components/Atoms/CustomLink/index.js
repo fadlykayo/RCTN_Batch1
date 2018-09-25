@@ -14,27 +14,19 @@ export default class CustomLink extends Component {
   render() {
     return (
       <Route
-        path={this.props.toLink}
+        path={this.props.to}
         exact={this.props.exact}
-        children={({ match }) => (
-          <div >
-            <Link className={match ? css(style.header_title) : ""} to={this.props.toLink}>{this.props.title}</Link>
-          </div>
-        )}
+        children={({ match }) => {
+          console.log(match);
+          return (
+            <Link className={css(style.header_title)} to={this.props.to}>{this.props.title}</Link>
+          )}
+        }
       />
     );
+
+    // return (
+    //   <Link className={css(style.header_title)} to={this.props.to}>{this.props.title}</Link>
+    // );
   }
 }
-//
-// const OldSchoolMenuLink = ({ label, to, activeOnlyWhenExact }) => (
-//   <Route
-//     path={to}
-//     exact={activeOnlyWhenExact}
-//     children={({ match }) => (
-//       <div className={match ? "active" : ""}>
-//         {match ? "> " : ""}
-//         <Link to={to}>{label}</Link>
-//       </div>
-//     )}
-//   />
-// );
