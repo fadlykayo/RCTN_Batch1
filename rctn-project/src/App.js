@@ -34,12 +34,14 @@ export default class App extends Component {
           <div className="root">
 
             <Header>
-              <NavBar>
+              <NavBar className="header_left">
                 <CustomLink exact to="/" title='Qtemu'/>
                 <CustomLink to="/create" title='Create Meetup'/>
                 <CustomLink to="/explore" title='Explore'/>
               </NavBar>
-              <CustomLink to="/login" title='Login'/>
+              <NavBar className="header_right">
+                <CustomLink to="/login" title='Login'/>
+              </NavBar>
             </Header>
 
             <Route exact path="/" component={Home}/>

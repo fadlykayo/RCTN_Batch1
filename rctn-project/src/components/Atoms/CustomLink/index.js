@@ -4,7 +4,6 @@ import {
   Route,
 } from "react-router-dom";
 import { css } from 'emotion';
-
 // import PropTypes from 'prop-types';
 
 import './style.css';
@@ -18,7 +17,7 @@ export default class CustomLink extends Component {
         exact={this.props.exact}
         children={({ match }) => {
           return (
-            <Link className={ match ? css(style.header_title) : ''} to={this.props.to}>{this.props.title}</Link>
+            <Link className={ match ? css(style.title) : css(style.titleDefault)} to={this.props.to}>{this.props.title}</Link>
           )}
         }
       />

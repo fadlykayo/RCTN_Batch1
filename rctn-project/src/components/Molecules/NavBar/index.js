@@ -6,7 +6,7 @@ import './style.css';
 export default class NavBar extends Component {
   render() {
     return (
-      <div className="header_left">
+      <div className={this.props.className}>
         {this.props.children}
       </div>
     );
