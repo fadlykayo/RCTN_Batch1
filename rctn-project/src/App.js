@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import { Provider } from "react-redux";
 import {
   BrowserRouter as Router,
   Route,
-  Link,
 } from "react-router-dom";
+
+import store from "./configs";
 // import PropTypes from 'prop-types';
 
 import {
@@ -25,35 +27,29 @@ import {
 import './App.css';
 
 export default class App extends Component {
-  // <ul>
-  //   <li>
-  //     <Link to="/">Home</Link>
-  //   </li>
-  //   <li>
-  //     <Link to="/about">About</Link>
-  //   </li>
-  // </ul>
   render() {
     return (
-      <Router>
-        <div className="root">
+      <Provider store={store}>
+        <Router>
+          <div className="root">
 
-          <Header>
-            <NavBar>
-              <CustomLink exact to="/" title='Qtemu'/>
-              <CustomLink to="/create" title='Create Meetup'/>
-              <CustomLink to="/explore" title='Explore'/>
-            </NavBar>
-            <CustomLink to="/login" title='Login'/>
-          </Header>
+            <Header>
+              <NavBar>
+                <CustomLink exact to="/" title='Qtemu'/>
+                <CustomLink to="/create" title='Create Meetup'/>
+                <CustomLink to="/explore" title='Explore'/>
+              </NavBar>
+              <CustomLink to="/login" title='Login'/>
+            </Header>
 
-          <Route exact path="/" component={Home}/>
-          <Route path="/create" component={CreateMeetup}/>
-          <Route path="/explore" component={Explore}/>
-          <Route path="/login" component={Login}/>
+            <Route exact path="/" component={Home}/>
+            <Route path="/create" component={CreateMeetup}/>
+            <Route path="/explore" component={Explore}/>
+            <Route path="/login" component={Login}/>
 
-        </div>
-      </Router>
+          </div>
+        </Router>
+      </Provider>
     );
   }
 };

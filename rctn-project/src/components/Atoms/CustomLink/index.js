@@ -17,9 +17,8 @@ export default class CustomLink extends Component {
         path={this.props.to}
         exact={this.props.exact}
         children={({ match }) => {
-          console.log(match);
           return (
-            <Link className={css(style.header_title)} to={this.props.to}>{this.props.title}</Link>
+            <Link className={ match ? css(style.header_title) : ''} to={this.props.to}>{this.props.title}</Link>
           )}
         }
       />
