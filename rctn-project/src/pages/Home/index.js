@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
-
+import { connect } from 'react-redux';
+import axios from "axios";
 // import PropTypes from 'prop-types';
 
+import {
+  UserActionCreator,
+} from '../../actions';
 import {
   Profile,
   Section,
@@ -16,7 +20,22 @@ import {
 
 import './style.css';
 
-export default class Home extends Component {
+const mapStateToProps = (state) => {
+  return {
+    members: state.user,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchData: () => dispatch(UserActionCreator.fetchData()),
+    register: (data) => dispatch(UserActionCreator.register(data)),
+    login: (data) => dispatch(UserActionCreator.login(data)),
+    logout: () => dispatch(UserActionCreator.logout()),
+  };
+};
+
+class Home extends Component {
   constructor(props) {
     super(props);
 
@@ -50,11 +69,74 @@ export default class Home extends Component {
           topic: 'JakartaJS with Hacktiv8',
           participants: '39'
         }
-      ]
+      ],
+      members: [],
+      user: {
+        name: '',
+        email: '',
+      },
+      resultUser: ''
     };
   };
 
+  componentDidMount() {
+    // axios
+    // .get("https://randomuser.me/api/?results=5")
+    // .then(response => {
+    //   this.setState({
+    //     members: response.data.results,
+    //   })
+    // });
+    //
+    // this.props.fetchData();
+
+    const userData = localStorage.getItem('user');
+
+    console.log('localStorage userData', userData);
+
+    if (userData) {
+      this.setState({ user: JSON.parse(userData) });
+    };
+  };
+
+  onClickLogin = (data) => {
+    this.props.login({
+      name: 'fadly',
+      email: 'fadly.kayo@gmail.com',
+    });
+  };
+
+  onClickLogout = () => {
+    this.props.logout();
+  };
+
+  onChangeText = (dynamicKey) => (event) => {
+    let user = {...this.state.user};
+
+    user[dynamicKey] = event.target.value;
+    // [dynamicKey]: event.target.value,
+
+    this.setState({user});
+  };
+
+  handlePost() {
+    axios
+    .post("http://localhost:4000/daftarNama", {
+      "user": {
+        "name": this.state.user.name,
+        "email": this.state.user.email,
+      }
+    })
+    .then(response => {
+      this.setState({resultUser: response.data.user})
+    });
+  };
+
   render() {
+    console.log('ini state members', this.state.members);
+    console.log('ini state user', this.state.user);
+    console.log('ini props reducer members', this.props.members);
+    console.log('ini props reducer members.user', this.props.members.user);
     return (
       <div className="body">
 
@@ -65,6 +147,7 @@ export default class Home extends Component {
           rightList={[this.state.info.location, this.state.info.numberOfMembers, this.state.info.headOrganizer]}
           title={'Hacktiv8 Meetup'}
           button
+          onClick={this.onClickLogin}
         />
 
         <Section>
@@ -119,3 +202,5 @@ export default class Home extends Component {
     );
   }
 };
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

@@ -44,7 +44,7 @@ export default class Profile extends Component {
 
   renderButton() {
     if (this.props.button) {
-      return (<Button title={'Join Us'}></Button>);
+      return (<Button title={'Join Us'} onClick={this.props.onClick}></Button>);
     };
 
     return null;
