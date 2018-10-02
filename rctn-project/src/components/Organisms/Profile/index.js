@@ -30,12 +30,12 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 class Profile extends Component {
-  onClickLogin = (data) => {
-    this.props.login({
-      name: 'fadly',
-      email: 'fadly.kayo@gmail.com',
-    });
-  };
+  // onClickLogin = (data) => {
+  //   this.props.login({
+  //     name: 'fadly',
+  //     email: 'fadly.kayo@gmail.com',
+  //   });
+  // };
 
   renderImage() {
     if (this.props.circleThumbnail) {
@@ -67,7 +67,7 @@ class Profile extends Component {
 
   renderButton() {
     if (this.props.button) {
-      return (<Button title={'Join Us'} onClick={this.onClickLogin}></Button>);
+      return (<Button title={'Join Us'} onClick={this.props.onClick}></Button>);
     };
 
     return null;

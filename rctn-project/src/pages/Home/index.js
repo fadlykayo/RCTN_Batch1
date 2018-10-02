@@ -97,9 +97,9 @@ class Home extends Component {
 
     console.log('localStorage userData', userData);
 
-    if (userData) {
-      this.setState({ user: JSON.parse(userData) });
-    };
+    // if (userData) {
+    //   this.setState({ user: JSON.parse(userData) });
+    // };
   };
 
   onClickLogin = (data) => {
@@ -110,6 +110,7 @@ class Home extends Component {
   };
 
   onClickLogout = () => {
+    console.log('masuk logout');
     this.props.logout();
   };
 
@@ -150,7 +151,7 @@ class Home extends Component {
           rightList={[this.state.info.location, this.state.info.numberOfMembers, this.state.info.headOrganizer]}
           title={'Hacktiv8 Meetup'}
           button
-          onClick={this.onClickLogin}
+          onClick={this.onClickLogout}
         />
 
         <Section>
