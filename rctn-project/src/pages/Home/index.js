@@ -5,6 +5,7 @@ import axios from "axios";
 
 import {
   UserActionCreator,
+  ProductActionCreator
 } from '../../actions';
 import {
   Profile,
@@ -23,6 +24,7 @@ import './style.css';
 const mapStateToProps = (state) => {
   return {
     members: state.user,
+    products: state.product
   };
 };
 
@@ -32,6 +34,7 @@ const mapDispatchToProps = (dispatch) => {
     register: (data) => dispatch(UserActionCreator.register(data)),
     login: (data) => dispatch(UserActionCreator.login(data)),
     logout: () => dispatch(UserActionCreator.logout()),
+    createProduct: () => dispatch(ProductActionCreator.createProduct()),
   };
 };
 
@@ -88,7 +91,7 @@ class Home extends Component {
     //   })
     // });
     //
-    this.props.fetchData();
+    // this.props.fetchData();
 
     const userData = localStorage.getItem('user');
 
@@ -133,10 +136,10 @@ class Home extends Component {
   };
 
   render() {
-    console.log('ini state members', this.state.members);
-    console.log('ini state user', this.state.user);
-    console.log('ini props reducer members', this.props.members);
-    console.log('ini props reducer members.user', this.props.members.user);
+    // console.log('ini state members', this.state.members);
+    // console.log('ini state user', this.state.user);
+    // console.log('ini props reducer members', this.props.members);
+    // console.log('ini props reducer members.user', this.props.members.user);
     return (
       <div className="body">
 

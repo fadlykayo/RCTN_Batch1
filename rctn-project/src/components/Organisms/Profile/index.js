@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 // import PropTypes from 'prop-types';
 
+import {
+  UserActionCreator,
+} from '../../../actions';
 import {
   Section,
 } from '../';
@@ -13,7 +17,26 @@ import {
 } from '../../Atoms';
 import './style.css';
 
-export default class Profile extends Component {
+const mapStateToProps = (state) => {
+  return {
+    members: state.user,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    login: (data) => dispatch(UserActionCreator.login(data)),
+  };
+};
+
+class Profile extends Component {
+  onClickLogin = (data) => {
+    this.props.login({
+      name: 'fadly',
+      email: 'fadly.kayo@gmail.com',
+    });
+  };
+
   renderImage() {
     if (this.props.circleThumbnail) {
       return (<img alt="thumbnail_circle" src="https://via.placeholder.com/80x80" style={{height: 80, width: 80, borderRadius: 50}}/>);
@@ -44,13 +67,14 @@ export default class Profile extends Component {
 
   renderButton() {
     if (this.props.button) {
-      return (<Button title={'Join Us'} onClick={this.props.onClick}></Button>);
+      return (<Button title={'Join Us'} onClick={this.onClickLogin}></Button>);
     };
 
     return null;
   };
 
   render() {
+    console.log(this.props.members);
     return (
       <div className="row">
 
@@ -77,3 +101,5 @@ export default class Profile extends Component {
     );
   }
 }
+
+export default connect(mapStateToProps, mapDispatchToProps)(Profile);

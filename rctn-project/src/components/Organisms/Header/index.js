@@ -1,9 +1,30 @@
 import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 
+import { connect } from 'react-redux';
+import {
+  UserActionCreator,
+} from '../../../actions';
+
 import './style.css';
 
-export default class Header extends Component {
+const mapStateToProps = (state) => {
+  return {
+    members: state.user,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    register: (data) => dispatch(UserActionCreator.register(data)),
+  };
+};
+
+class Header extends Component {
+  onClickHeader() {
+    this.props.register()
+  }
+
   render() {
     return (
       <div className="header">
@@ -12,3 +33,5 @@ export default class Header extends Component {
     );
   }
 }
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
