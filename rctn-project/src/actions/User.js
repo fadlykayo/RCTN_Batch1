@@ -2,7 +2,7 @@ import {
   LOGIN,
   REGISTER,
   LOGOUT,
-  UPDATE_PROFILE,
+  // UPDATE_PROFILE,
   FETCH_MEMBER,
 } from '../constants/Types';
 
@@ -14,7 +14,7 @@ Dengan bantuan redux-thunk (dispatch) ini kita bisa men-dispatch (memberi kabar)
 */
 
 export function login(data) {
-  localStorage.setItem('user', JSON.stringify({...data, token: 12345}));
+  // localStorage.setItem('user', JSON.stringify({...data, token: 12345}));
 
   return {
     type: LOGIN,
@@ -27,7 +27,7 @@ export function login(data) {
 };
 
 export function logout() {
-  localStorage.removeItem('user');
+  // localStorage.removeItem('user');
 
   return {
     type: LOGOUT,

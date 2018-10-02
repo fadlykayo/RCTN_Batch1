@@ -1,3 +1,5 @@
+import { REHYDRATE } from 'redux-persist';
+
 import {
   LOGIN,
   REGISTER,
@@ -13,6 +15,9 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
+    case REHYDRATE:
+      return action.payload ? action.payload : state
+
     case FETCH_MEMBER:
       return {
         ...state,

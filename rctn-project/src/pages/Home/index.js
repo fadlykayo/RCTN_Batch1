@@ -93,9 +93,9 @@ class Home extends Component {
     //
     // this.props.fetchData();
 
-    const userData = localStorage.getItem('user');
+    // const userData = localStorage.getItem('user');
 
-    console.log('localStorage userData', userData);
+    // console.log('localStorage userData', userData);
 
     // if (userData) {
     //   this.setState({ user: JSON.parse(userData) });
@@ -139,7 +139,7 @@ class Home extends Component {
   render() {
     // console.log('ini state members', this.state.members);
     // console.log('ini state user', this.state.user);
-    // console.log('ini props reducer members', this.props.members);
+    console.log('ini props reducer members', this.props.members);
     // console.log('ini props reducer members.user', this.props.members.user);
     return (
       <div className="body">
@@ -151,7 +151,7 @@ class Home extends Component {
           rightList={[this.state.info.location, this.state.info.numberOfMembers, this.state.info.headOrganizer]}
           title={'Hacktiv8 Meetup'}
           button
-          onClick={this.onClickLogout}
+          onClick={this.onClickLogin}
         />
 
         <Section>

@@ -10,5 +10,7 @@ Dengan bantuan redux-thunk (dispatch) ini kita bisa men-dispatch (memberi kabar)
 */
 
 export function createProduct() {
-  return null
+  return {
+    type: LOGOUT,
+  };
 }
