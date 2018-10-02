@@ -88,7 +88,7 @@ class Home extends Component {
     //   })
     // });
     //
-    // this.props.fetchData();
+    this.props.fetchData();
 
     const userData = localStorage.getItem('user');
 
