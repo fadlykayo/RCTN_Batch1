@@ -1,0 +1,327 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home renders correctly 1`] = `
+<div
+  className="body"
+>
+  <div
+    className="row"
+  >
+    <img
+      alt="placeholder"
+      src="https://via.placeholder.com/200x200"
+    />
+    <div
+      className="section_right"
+    >
+      <h3
+        className="section_title_right"
+      >
+        Hacktiv8 Meetup
+      </h3>
+      <div
+        className="section_content_right"
+      >
+        <div
+          className="row_right_info_content"
+        >
+          <div>
+            Location
+          </div>
+          <div>
+            Members
+          </div>
+          <div>
+            Organizer
+          </div>
+        </div>
+        <div
+          className="row_right_info_content"
+        >
+          <div>
+            Jakarta, Indonesia
+          </div>
+          <div>
+            1078
+          </div>
+          <div>
+            Hacktiv8
+          </div>
+        </div>
+      </div>
+      <button
+        className="button"
+        onClick={[Function]}
+      >
+        Join Us
+      </button>
+    </div>
+  </div>
+  <div
+    className={undefined}
+  >
+    <h3
+      className={undefined}
+    >
+      Next Meetup
+    </h3>
+    <div
+      className="section_content_column_grey"
+    >
+      <h4
+        style={
+          Object {
+            "marginBottom": 10,
+            "marginTop": 0,
+          }
+        }
+      >
+        Awesome meetup and event
+      </h4>
+      <div>
+        29 January 2019
+      </div>
+      <div>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      </div>
+      <div>
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+      </div>
+      <div>
+        It has survived not only five centuries, but also the leap into electronic typesetting.
+      </div>
+      <div>
+        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.
+      </div>
+      <div>
+        Lorem Ipsum is simply dummy text of the printing.
+      </div>
+      <p>
+        See you there!
+      </p>
+      <p>
+        Best, Twinky, Winky, Dipsy, Lala, Poh. JakartaJS Organizer.
+      </p>
+    </div>
+  </div>
+  <div
+    className={undefined}
+  >
+    <h3
+      className={undefined}
+    >
+      About Meetup
+    </h3>
+    <div
+      className="section_content_column_white"
+    >
+      <div
+        style={
+          Object {
+            "marginBottom": 15,
+          }
+        }
+      >
+        Come and meet other developers interested in Javascript and it's library in Greater Jakarta area.
+      </div>
+      <div>
+        Twitter 
+        @JakartaJS
+         and we use hashtag #jakartajs
+      </div>
+    </div>
+  </div>
+  <div
+    className={undefined}
+  >
+    <h3
+      className={undefined}
+    >
+      Members
+    </h3>
+    <div
+      className="row"
+    >
+      <img
+        alt="thumbnail_circle"
+        src="https://via.placeholder.com/80x80"
+        style={
+          Object {
+            "borderRadius": 50,
+            "height": 80,
+            "width": 80,
+          }
+        }
+      />
+      <div
+        className="section_right_alt"
+      >
+        <h3
+          className="section_title_right"
+        >
+          Organizers
+        </h3>
+        <div
+          className="section_content_right"
+        >
+          <div
+            className="row_right_info_content_alt"
+          >
+            <div>
+              Fadly Kayo
+            </div>
+          </div>
+          <div
+            className="row_right_info_content_alt"
+          >
+            <div>
+              4 others
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="PastMeetup"
+    >
+      <div
+        className="Subtitle"
+      >
+        Past Meetup
+      </div>
+      <div
+        className="SeeAll"
+        onClick={[Function]}
+      >
+        See All
+      </div>
+      <div
+        className="CardGroup"
+      >
+        <div>
+          <div
+            className="CardItem"
+          >
+            <h3
+              className="bold"
+            >
+              27 November 2018
+            </h3>
+            <hr />
+            <div
+              className="make-inline"
+            >
+              <div
+                className="space5px bold"
+                content="#39"
+              />
+              <div
+                className="bold"
+                content="JakartaJS with kumparan"
+              />
+            </div>
+            <div
+              className="make-inline"
+            >
+              <div
+                className="space5px bold"
+                content="139"
+              />
+              <div
+                content="went"
+              />
+            </div>
+            <button
+              className="view"
+            >
+              View
+            </button>
+          </div>
+        </div>
+        <div>
+          <div
+            className="CardItem"
+          >
+            <h3
+              className="bold"
+            >
+              27 November 2018
+            </h3>
+            <hr />
+            <div
+              className="make-inline"
+            >
+              <div
+                className="space5px bold"
+                content="#40"
+              />
+              <div
+                className="bold"
+                content="JakartaJS with bibli"
+              />
+            </div>
+            <div
+              className="make-inline"
+            >
+              <div
+                className="space5px bold"
+                content="239"
+              />
+              <div
+                content="went"
+              />
+            </div>
+            <button
+              className="view"
+            >
+              View
+            </button>
+          </div>
+        </div>
+        <div>
+          <div
+            className="CardItem"
+          >
+            <h3
+              className="bold"
+            >
+              27 November 2018
+            </h3>
+            <hr />
+            <div
+              className="make-inline"
+            >
+              <div
+                className="space5px bold"
+                content="#41"
+              />
+              <div
+                className="bold"
+                content="JakartaJS with Hacktiv8"
+              />
+            </div>
+            <div
+              className="make-inline"
+            >
+              <div
+                className="space5px bold"
+                content="39"
+              />
+              <div
+                content="went"
+              />
+            </div>
+            <button
+              className="view"
+            >
+              View
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
