@@ -110,7 +110,6 @@ class Home extends Component {
   };
 
   onClickLogout = () => {
-    console.log('masuk logout');
     this.props.logout();
   };
 
