@@ -136,10 +136,8 @@ class Home extends Component {
   };
 
   render() {
-    // console.log('ini state members', this.state.members);
-    // console.log('ini state user', this.state.user);
+    // console.log('ini state', this.state);
     console.log('ini props reducer members', this.props.members);
-    // console.log('ini props reducer members.user', this.props.members.user);
     return (
       <div className="body">
 
