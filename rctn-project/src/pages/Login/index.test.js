@@ -5,15 +5,17 @@ import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 
+// Configuration for enzyme
 import { shallow, mount, render, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
 
-import Login from './';
-
+// Configuration for redux-mock-store
 const middlewares = [];
 const mockStore = configureStore(middlewares);
+
+import Login from './';
 
 describe('Describe component <Login/>', () => {
   test('Login renders correctly', () => {
@@ -41,7 +43,7 @@ describe('Describe component <Login/>', () => {
       <Login/>, container
     );
 
-    // console.log('container', container);
+    // console.log('attributes', container.attributes);
 
     expect(container.textContent).toMatch('Ini Login')
   })
